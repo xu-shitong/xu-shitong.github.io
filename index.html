@@ -67,22 +67,59 @@
       <div style="margin-bottom: 1.5rem;">
         <h2>About Me</h2>
         <p>
-          I am a third-year Ph.D. candidate in Computer Science at the <strong>University of Oxford</strong>, supervised by <strong>Prof. Niki Trigoni</strong> and <strong>Prof. Andrew Markham</strong>. I obtained my Master and Bachlor degree in <strong>Imperial College London</strong>, where I completed my Master thesis under the supervision of <strong>Prof. Ben Glocker</strong>.
+          I am a fourth-year Ph.D. candidate in Computer Science at the <strong>University of Oxford</strong>, supervised by <strong>Prof. Niki Trigoni</strong> and <strong>Prof. Andrew Markham</strong>. I obtained my Master and Bachlor degree in <strong>Imperial College London</strong>, where I completed my Master thesis under the supervision of <strong>Prof. Ben Glocker</strong>.
         </p>
       </div>
 
       <div style="margin-bottom: 1.5rem;">
         <h2>Research Interest</h2>
-        <p>
-          <!-- My research interests include audio signal processing and multimodal LLM. During my Ph.D., I focus on developing multimodal models that integrate audio, text, and electroglottographic (EGG) signals to improve the identification of target sound sources and their acoustic characteristics in complex, noisy environments. I am also interested in incorporating physics-based priors to enhance model robustness and generalization, particularly under limited-data conditions.-->
-          During my PhD, my research focuses on developing deep learning models that integrate information across multiple modalities, including <strong>audio, text, and electroglottographic (EGG) signals</strong>, to understand real-world sound sources' <strong>spatial, temporal, and characteristic</strong> features. More broadly, my research interests include:
-          <ul>
-            <li><strong>Audio Signal Processing</strong></li>
-            <li><strong>Multimodal Large Language Models</strong></li>
-            <li><strong>Physics-Informed Machine Learning</strong></li>
-          </ul>
 
-          In my previous projects, I explored encoding the target speaker's speech characteristics from noisy audio enrollment pairs, addressing the scarcity of clean enrollment audio in real-world <strong>target speaker extraction</strong> scenario. I also coauthored with labmates on spatial audio processing projects, including <strong>reverberation effect editing</strong> and <strong>sound source localization</strong> with <strong>distributed microphones</strong>. Building on these experience, I am now extending large audio-language models (LALMs) to perform complex audio processing tasks such as audio retrieval and <strong>spatial audio understanding</strong>. 
+
+        <p>
+          My research lies at the intersection of <strong>Audio Signal Processing</strong> and <strong>Multimodal Machine Learning</strong>. Specifically, my work focuses on developing deep learning models that can understand both the <strong>semantic meaning</strong> and the <strong>spatial acoustic properties</strong> of complex audio environments. 
+
+        <p>
+          Rather than relying solely on data-driven learning, I incorporate physical, geometric, and domain-specific priors into my deep learning architectures. My research is organized around three connected directions:
+        </p>
+
+        <ul>
+          <li>
+        <strong>Robust Semantic Understanding:</strong> Developing models capable of decoding semantic information from complex, real-world audio. This includes designing flexible enrollment strategies for isolate target speakers under challenging, noisy conditions; and integrating domain knowledge for data-scarce tasks like pathological speech detection.
+        <!-- <strong>Domain-Informed Semantic Understanding:</strong> Developing robust models capable of decoding linguistic and clinical information from complex, noisy audio. This involves leveraging domain-specific knowledge to isolate target signals and detect subtle pathological speech features. -->
+          </li>
+          <li>
+        <strong>Spatial Audio Modeling & Localization:</strong> Incorporating acoustic propagation models and spatial geometry into deep learning systems for sound source localization and audio rendering at novel positions, including with distributed and uncertain microphone geometries.
+
+<!-- driven modules. modeling of  meaningful acoustic representations and simulated data. This research enables the rendering of novel acoustic perspectives and allows for robust, geometry-agnostic sound source localization using distributed microphone networks. -->
+        <!-- <strong>Physics-Driven Spatial Acoustics:</strong> Utilizing wave propagation models and spatial geometry to understand where sound originates and how it travels. This enables accurate sound source localization and the rendering of novel acoustic perspectives, even with distributed or imperfect microphone arrays. -->
+          </li>
+          <li>
+            <strong>Joint Spatial-Semantic Scene Analysis:</strong> Bridging semantic perception with spatial acoustic scene understanding. By fusing these two capabilities, I build environment-aware frameworks that provide a holistic, distributed understanding of complex acoustic scenes.
+          </li>
+        </ul>
+
+        <!-- My previous works addressed specific challenges in real-world audio perception, including target speaker extraction without clean enrollment signals, sound source localization under microphone position uncertainty, and pathological speech classification with limited training data. Currently, I am exploring more general and adaptable audio intelligenc, including developing microphone-geometry-agnostic models for scene understanding, and extending Large Audio-Language Models (LALMs) with spatial reasoning and retrieval capabilities.  -->
+        
+<!--         
+        Ultimately, I am interested in developing multi-modality audio systems that can cooperate with other modalities while offering models unique advantage from audio preception capabilities.
+
+        <p>
+          More broadly, my research interests include:
+        </p>
+        <ul>
+          <li><strong>Audio Signal Processing & Spatial Audio</strong></li>
+          <li><strong>Multimodal Large Language Models (Audio-Language Modeling)</strong></li>
+          <li><strong>Physics-Informed & Geometry-Aware Machine Learning</strong></li>
+        </ul> -->
+
+
+
+        <!-- My research trajectory reflects a natural progression from solving isolated acoustic challenges to building highly generalizable, zero-shot systems. While my earlier publications focused on specific bottlenecks—such as extracting target speakers without clean enrollment data or localizing sound across distributed arrays—my current work scales these principles to foundation models and novel geometries. 
+      
+        Specifically, I am now developing <strong>geometry-agnostic TSE models</strong> that achieve superior performance and allow for zero-shot deployment on novel, unseen microphone configurations. Concurrently, I am expanding the capabilities of Large Audio-Language Models (LALMs) to perform complex, zero-shot spatial audio reasoning and retrieval, pushing towards systems that can truly understand an acoustic scene as humans do. -->
+
+
+          <!-- In my previous projects, I explored encoding the target speaker's speech characteristics from noisy audio enrollment pairs, addressing the scarcity of clean enrollment audio in real-world <strong>target speaker extraction</strong> scenario. I also coauthored with labmates on spatial audio processing projects, including <strong>reverberation effect editing</strong> and <strong>sound source localization</strong> with <strong>distributed microphones</strong>. Building on these experience, I am now developing models on , allowing zero-shot deployment of tse models on novel microphone geometries, allowing microphone geometry agnostic tse with superior performance and collaboration of m ... and extending large audio-language models (LALMs) to perform complex audio processing tasks such as audio retrieval and <strong>spatial audio understanding</strong>. allowing zero shot deployment of trained models to perform spatial audio understanding. to achieve superior performance at audio extraction  -->
 
         </p>
 
@@ -91,6 +128,26 @@
 
         <h2>Research Experience</h2>
         <p>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
+            <img src="asset/clinalm.png" style="width: 150px; height: auto; border-radius: 8px;">
+            
+            <div>
+            <strong>ClinALM: Clinically Knowledge Informed Audio-Language Modeling for Pathological Speech.</strong> <br>
+            <strong>Shitong Xu</strong>, Chang Xu, Zilong Wang.<br>
+            2026, In submission<br><br>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
+            <img src="asset/scene_understand_mic.png" style="width: 150px; height: auto; border-radius: 8px;">
+            
+            <div>
+            <strong>Geometry-Informed Distributed Acoustic Scene Understanding.</strong><br>
+            Yiyuan Yang, <strong>Shitong Xu</strong>, Niki Trigoni, Andrew Markham. <br>
+            Interspeech 2026<br><br>
+            </div>
+          </div>
+
           <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
             <img src="asset/tse_mot.png" style="width: 150px; height: auto; border-radius: 8px;">
             
@@ -165,6 +222,18 @@
 
             <h3>Internship</h3>
             <div style="display: flex; align-items: center; gap: 1rem;">
+              <img src="asset/ms_logo.jpg" style="width: 120px; height: auto; border-radius: 8px;">
+              
+              <div>
+                <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
+                  <strong>Research Intern</strong><br>
+                  <span>Microsoft Research Asia, Mar 2026 - July 2026</span><br>
+                  <span>Advised by Chang Xu, Zilong Wang</span><br>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
               <img src="asset/cisco_logo.png" style="width: 120px; height: auto; border-radius: 8px;">
               
               <div>
@@ -181,8 +250,9 @@
 
         <h2>Teaching Assistant</h2>
         <p style="margin-left: 1.0rem">
-          Deep Learning for Healthcare<br>
-          Physics Informed Machine Learning
+          Machine Learning (Oct - Dec 2023, Oxford)<br>
+          Deep Learning for Healthcare (Feb - Apr 2024, Oxford)<br>
+          Physics Informed Machine Learning (Feb - Apr 2025, Oxford)
         </p>
 
       </section>
