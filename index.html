@@ -1,259 +1,281 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Shitong Xu</title>
-
-    <style>
-      /* Center everything inside the header */
-      header.profile {
-        text-align: center;
-        margin: 3rem auto;
-        max-width: 600px;
-      }
-
-      /* Circular avatar */
-      .avatar {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;  /* ensures the face stays centered in the circle */
-        display: block;
-        margin: 0 auto 1rem auto; /* centers image and adds space below */
-      }
-
-      header.profile h1 {
-        margin: 0;
-        font-size: 2rem;
-      }
-
-      header.profile p {
-        margin: 0.4rem 0;
-        line-height: 1.5;
-      }
-
-      header.profile a {
-        color: #0366d6;
-        text-decoration: none;
-      }
-
-      header.profile a:hover {
-        text-decoration: underline;
-      }
-    </style>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="profile">
-        <img src="asset/avatar.jpeg" alt="Profile photo" class="avatar">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I am a fourth-year Ph.D. candidate in Computer Science at the University of Oxford, supervised by Prof. Niki Trigoni and Prof. Andrew Markham. I obtained my Master and Bachlor degree in Imperial College London, where I completed my Master thesis under the supervision of Prof. Ben Glocker.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Shitong Xu | University of Oxford</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231772d0'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3ESX%3C/text%3E%3C/svg%3E">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: #252525;
+      font-family: Lato, Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover, a:focus-visible { color: #bc6517; text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #1772d0; outline-offset: 3px; }
+    .page { width: min(900px, calc(100% - 48px)); margin: 0 auto; padding: 48px 0 56px; }
+    .intro { display: grid; grid-template-columns: minmax(0, 1fr) 235px; align-items: center; gap: 42px; }
+    h1 { margin: 0 0 6px; font-size: 34px; font-weight: 400; line-height: 1.2; }
+    .role { color: #5c5c5c; margin: 0 0 18px; font-size: 15px; }
+    .intro p { margin: 0 0 12px; }
+    .photo { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .links { margin: 18px 0 0; }
+    .links a { display: inline-block; margin: 0 5px; }
+    .links a:first-child { margin-left: 0; }
+    .sep { color: #b6b6b6; }
+    section { margin-top: 36px; }
+    h2 { margin: 0 0 14px; font-size: 23px; font-weight: 400; }
+    strong {
+    font-weight: 500;
+    color: #1772d0;
+    } 
+    .topics { display: flex; gap: 8px; flex-wrap: wrap; }
+    .topic { background: #f2f6fa; border: 1px solid #e5ebf2; border-radius: 4px; padding: 4px 9px; font-size: 14px; color: #3f5368; }
+    .news { list-style: none; padding: 0; margin: 0; }
+    .news li { margin: 7px 0; }
+    .news time { color: #555; margin-right: 14px; font-weight: 700; }
+    .publication { display: grid; grid-template-columns: 165px minmax(0, 1fr); gap: 24px; padding: 16px 0; align-items: start; }
+    .publication + .publication { border-top: 1px solid #ededed; }
+    .publication img { display: block; width: 165px; height: auto; max-height: 130px; object-fit: contain; }
+    .publication h3 { margin: 0 0 5px; font-size: 17px; font-weight: 700; line-height: 1.4; }
+    .authors { margin: 0; font-size: 15px; }
+    .venue { margin: 5px 0 0; font-size: 15px; font-style: italic; color: #505050; }
+    .paper-links { margin: 4px 0 0; font-size: 14px; }
+    .paper-links a + a::before { content: " / "; color: #999; }
+    @media (max-width: 700px) {
+      .page { width: min(100% - 32px, 620px); padding-top: 28px; }
+      .intro { grid-template-columns: minmax(0, 1fr) 145px; gap: 20px; align-items: start; }
+      h1 { font-size: 30px; }
+      .publication { grid-template-columns: 120px minmax(0, 1fr); gap: 16px; }
+      .publication img { width: 120px; max-height: 105px; }
+    }
+    @media (max-width: 480px) {
+      .intro { grid-template-columns: 1fr; }
+      .photo { width: 165px; margin: 0 auto; }
+      .intro-photo { grid-row: 1; }
+      .publication { grid-template-columns: 1fr; gap: 9px; }
+      .publication img { width: 150px; max-height: 120px; }
+      .sep { display: inline; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <div class="intro-copy">
         <h1>Shitong Xu</h1>
-        <p>Ph.D. Candidate in Computer Science<br>University of Oxford</p>
+        <p class="role">PhD candidate, University of Oxford</p>
         <p>
-          <p>shitong.xu [at] cs.ox.ac.uk</p><br>
-          <a href="https://github.com/xu-shitong" target="_blank">GitHub</a> |
-          <a href="https://www.linkedin.com/in/%E4%B8%96%E6%A1%90-%E5%BE%90-9a78012a9/" target="_blank">LinkedIn</a> |
-          <a href="https://scholar.google.com/citations?user=PSecikcAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
+          I am a fourth-year PhD candidate in Department of Computer Science at the <strong>University of Oxford</strong>, supervised by <strong>Prof. Niki Trigoni</strong> and <strong>Prof. Andrew Markham</strong>. I obtained my Master and Bachlor degree in <strong>Imperial College London</strong>, where I completed my Master thesis under the supervision of <strong>Prof. Ben Glocker</strong>.
         </p>
-      </header>
-      <section style="max-width: 2000px;">
-      <div style="margin-bottom: 1.5rem;">
-        <h2>About Me</h2>
+
+        <h2 id="research-title">Research Interests</h2>
         <p>
-          I am a fourth-year Ph.D. candidate in Computer Science at the <strong>University of Oxford</strong>, supervised by <strong>Prof. Niki Trigoni</strong> and <strong>Prof. Andrew Markham</strong>. I obtained my Master and Bachlor degree in <strong>Imperial College London</strong>, where I completed my Master thesis under the supervision of <strong>Prof. Ben Glocker</strong>.
+        My research lies at the intersection of <strong>Audio Signal Processing</strong> and <strong>Multimodal Machine Learning</strong>, with a focus on understanding the <strong>semantic and spatial properties</strong> of complex acoustic environments.
         </p>
-      </div>
-
-      <div style="margin-bottom: 1.5rem;">
-        <h2>Research Interest</h2>
-
 
         <p>
-          My research lies at the intersection of <strong>Audio Signal Processing</strong> and <strong>Multimodal Machine Learning</strong>. Specifically, my work focuses on developing deep learning models that can understand both the <strong>semantic meaning</strong> and the <strong>spatial acoustic properties</strong> of complex audio environments. 
-
-        <p>
-          Rather than relying solely on data-driven learning, I incorporate physical, geometric, and domain-specific priors into my deep learning architectures. My research is organized around three connected directions:
+        My research spans three interconnected directions:
         </p>
 
         <ul>
-          <li>
-        <strong>Robust Semantic Understanding:</strong> Developing models capable of decoding semantic information from complex, real-world audio. This includes designing flexible enrollment strategies for isolate target speakers under challenging, noisy conditions; and integrating domain knowledge for data-scarce tasks like pathological speech detection.
-        <!-- <strong>Domain-Informed Semantic Understanding:</strong> Developing robust models capable of decoding linguistic and clinical information from complex, noisy audio. This involves leveraging domain-specific knowledge to isolate target signals and detect subtle pathological speech features. -->
-          </li>
-          <li>
-        <strong>Spatial Audio Modeling & Localization:</strong> Incorporating acoustic propagation models and spatial geometry into deep learning systems for sound source localization and audio rendering at novel positions, including with distributed and uncertain microphone geometries.
-
-<!-- driven modules. modeling of  meaningful acoustic representations and simulated data. This research enables the rendering of novel acoustic perspectives and allows for robust, geometry-agnostic sound source localization using distributed microphone networks. -->
-        <!-- <strong>Physics-Driven Spatial Acoustics:</strong> Utilizing wave propagation models and spatial geometry to understand where sound originates and how it travels. This enables accurate sound source localization and the rendering of novel acoustic perspectives, even with distributed or imperfect microphone arrays. -->
-          </li>
-          <li>
-            <strong>Joint Spatial-Semantic Scene Analysis:</strong> Bridging semantic perception with spatial acoustic scene understanding. By fusing these two capabilities, I build environment-aware frameworks that provide a holistic, distributed understanding of complex acoustic scenes.
-          </li>
+        <li>
+        <strong>Semantic Audio Understanding:</strong> Robust speech and audio analysis in complex acoustic environments, including target speaker extraction and pathological speech detection.
+        </li>
+        <li>
+        <strong>Spatial Audio Modeling:</strong> Sound source localization, spatially conditioned extraction, and spatial audio rendering under diverse acoustic and microphone configurations.
+        </li>
+        <li>
+        <strong>Spatial-Semantic Scene Understanding:</strong> Integrating semantic and spatial information for higher-level acoustic scene understanding, including spatial audio question answering.
+        </li>
         </ul>
 
-        <!-- My previous works addressed specific challenges in real-world audio perception, including target speaker extraction without clean enrollment signals, sound source localization under microphone position uncertainty, and pathological speech classification with limited training data. Currently, I am exploring more general and adaptable audio intelligenc, including developing microphone-geometry-agnostic models for scene understanding, and extending Large Audio-Language Models (LALMs) with spatial reasoning and retrieval capabilities.  -->
-        
-        <!-- Ultimately, I am interested in developing multi-modality audio systems that can cooperate with other modalities while offering models unique advantage from audio preception capabilities. -->
-
         <p>
-          More broadly, I have deep interest in the following fields:
+        More broadly, I have deep interest in the following fields:
         </p>
         <ul>
-          <li><strong>Physics-Informed Machine Learning</strong></li>
-          <li><strong>Electroencephalography (EEG) Brain Signal Processing</strong></li>
+        <!-- <li><strong>Audio Signal Processing</strong></li>
+        <li><strong>Multimodal Machine Learning</strong></li> -->
+        <li><strong>Physics-Informed Machine Learning</strong></li>
+        <li><strong>Electroencephalography (EEG) Brain Signal Processing</strong></li>
         </ul>
 
 
-        <!-- My research trajectory reflects a natural progression from solving isolated acoustic challenges to building highly generalizable, zero-shot systems. While my earlier publications focused on specific bottlenecks—such as extracting target speakers without clean enrollment data or localizing sound across distributed arrays—my current work scales these principles to foundation models and novel geometries. 
-      
-        Specifically, I am now developing <strong>geometry-agnostic TSE models</strong> that achieve superior performance and allow for zero-shot deployment on novel, unseen microphone configurations. Concurrently, I am expanding the capabilities of Large Audio-Language Models (LALMs) to perform complex, zero-shot spatial audio reasoning and retrieval, pushing towards systems that can truly understand an acoustic scene as humans do. -->
-
-
-          <!-- In my previous projects, I explored encoding the target speaker's speech characteristics from noisy audio enrollment pairs, addressing the scarcity of clean enrollment audio in real-world <strong>target speaker extraction</strong> scenario. I also coauthored with labmates on spatial audio processing projects, including <strong>reverberation effect editing</strong> and <strong>sound source localization</strong> with <strong>distributed microphones</strong>. Building on these experience, I am now developing models on , allowing zero-shot deployment of tse models on novel microphone geometries, allowing microphone geometry agnostic tse with superior performance and collaboration of m ... and extending large audio-language models (LALMs) to perform complex audio processing tasks such as audio retrieval and <strong>spatial audio understanding</strong>. allowing zero shot deployment of trained models to perform spatial audio understanding. to achieve superior performance at audio extraction  -->
-
-        </p>
-
-        <strong><span style="color: red;">I'm actively looking for internship and collaboration opportunities — feel free to reach out via email (shitong.xu [at] cs.ox.ac.uk).</span></strong>
+        <nav class="links" aria-label="Profile links">
+          <a href="mailto:shitong.xu@cs.ox.ac.uk">Email</a>
+          <span class="sep">/</span>
+          <a href="https://scholar.google.com/citations?user=PSecikcAAAAJ">Google Scholar</a>
+          <span class="sep">/</span>
+          <a href="https://github.com/xu-shitong">GitHub</a>
+          <span class="sep">/</span>
+          <a href="/asset/CV2026.pdf">CV</a>
+        </nav>
       </div>
+      <div class="intro-photo"><img class="photo" src="/asset/avatar.jpeg" alt="Portrait of Shitong Xu"></div>
+    </header>
 
-        <h2>Research Experience</h2>
-        <p>
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
-            <img src="asset/clinalm.png" style="width: 150px; height: auto; border-radius: 8px;">
+    <section aria-labelledby="research-title">
+<!-- 
+        <div class="topics" aria-label="Research topics">
+        <span class="topic">Clinical NLP</span>
+        <span class="topic">Reliable Medical AI</span>
+        <span class="topic">Causal Inference</span>
+        <span class="topic">Scientific Workflows</span> -->
+      <!-- </div> -->
+    </section>
+
+    <!-- <section aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <ul class="news">
+        <li><time datetime="2026">2026 —</time>Started DPhil at the University of Oxford</li>
+        <li><time datetime="2026">2026 —</time>Scaling Laws for Mixed Quantization accepted as EMNLP Oral</li>
+      </ul>
+    </section> -->
+
+    <section aria-labelledby="publications-title">
+      <h2 id="publications-title">Research Experience</h2>
+
+      <article class="publication">
+        <img src="asset/clinalm.png" loading="lazy" alt="Figure illustrating scaling laws for mixed quantization">
+        <div>
+          <h3><a href="https://arxiv.org/abs/2410.06722">ClinALM: Clinically Knowledge Informed Audio-Language Modeling for Pathological Speech</a></h3>
+          <p class="authors"><strong>Shitong Xu</strong>, Chang Xu, Zilong Wang.</p>
+          <p class="venue">2026, In submission</p>
+          <!-- <p class="paper-links"><a href="https://arxiv.org/abs/2410.06722">Paper</a></p> -->
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="asset/scene_understand_mic.png" loading="lazy" alt="Geometry-Informed Distributed Acoustic Scene Understanding">
+        <div>
+            <h3>Geometry-Informed Distributed Acoustic Scene Understanding</h3>
+            <p class="authors">Yiyuan Yang, <strong>Shitong Xu</strong>, Niki Trigoni, Andrew Markham.</p>
+            <p class="venue">Interspeech 2026</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2609.08026">Paper</a></p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="asset/tse_mot.png" loading="lazy" alt="Target Speaker Extraction through Comparing Noisy Positive and Negative Audio Enrollments">
+        <div>
+            <h3>Target Speaker Extraction through Comparing Noisy Positive and Negative Audio Enrollments</h3>
+            <p class="authors"><strong>Shitong Xu</strong>, Yiyuan Yang, Niki Trigoni, Andrew Markham.</p>
+            <p class="venue">Neural Information Processing Systems (NeurIPS), 2025</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2502.16611">Paper</a><a href="https://github.com/xu-shitong/TSE-through-Positive-Negative-Enroll">Code</a></p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="asset/distributed_mic_mot.png" loading="lazy" alt="Efficient and Microphone-Fault-Tolerant 3D Sound Source Localization">
+        <div>
+            <h3>Efficient and Microphone-Fault-Tolerant 3D Sound Source Localization</h3>
+            <p class="authors">Yiyuan Yang, <strong>Shitong Xu</strong>, Niki Trigoni, Andrew Markham.</p>
+            <p class="venue">Interspeech 2025</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2505.20961">Paper</a></p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="asset/spear_mot.png" loading="lazy" alt="SPEAR: Receiver-to-Receiver Acoustic Neural Warping Field">
+        <div>
+            <h3>SPEAR: Receiver-to-Receiver Acoustic Neural Warping Field</h3>
+            <p class="authors">Yuhang He*, <strong>Shitong Xu*</strong>, Jiaxing Zhong, Sangyun Shin, Niki Trigoni, Andrew Markham.</p>
+            <p class="venue">Preprint, 2024</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2406.11006">Paper</a><a href="https://github.com/xu-shitong/SPEAR">Code</a></p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="asset/clip-diffuse-lm.png" loading="lazy" alt="CLIP-Diffusion-LM: Apply Diffusion Model on Image Captioning">
+        <div>
+            <h3>CLIP-Diffusion-LM: Apply Diffusion Model on Image Captioning</h3>
+            <p class="authors"><strong>Shitong Xu</strong></p>
+            <p class="venue">Preprint, 2022</p>
+            <p class="paper-links"><a href="https://arxiv.org/abs/2210.04559">Paper</a><a href="https://github.com/xu-shitong/diffusion-image-captioning">Code</a></p></p>
+        </div>
+      </article>
+
+    </section>
+
+    <section aria-labelledby="intern-title">
+      <h2 id="intern-title">Internship</h2>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="asset/ms_logo.jpg" style="width: 120px; height: auto; border-radius: 8px;">
             
             <div>
-            <strong>ClinALM: Clinically Knowledge Informed Audio-Language Modeling for Pathological Speech.</strong> <br>
-            <strong>Shitong Xu</strong>, Chang Xu, Zilong Wang.<br>
-            2026, In submission<br><br>
+            <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
+                <strong>Microsoft Research Asia, Research Intern</strong><br>
+                <span>Mar 2026 - July 2026</span><br>
+                <span>Advised by Chang Xu, Zilong Wang</span><br>
             </div>
-          </div>
+            </div>
+        </div>
 
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
-            <img src="asset/scene_understand_mic.png" style="width: 150px; height: auto; border-radius: 8px;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="asset/cisco_logo.png" style="width: 120px; height: auto; border-radius: 8px;">
             
             <div>
-            <strong>Geometry-Informed Distributed Acoustic Scene Understanding.</strong><br>
-            Yiyuan Yang, <strong>Shitong Xu</strong>, Niki Trigoni, Andrew Markham. <br>
-            Interspeech 2026<br><br>
+            <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
+                <strong>Cisco system, Software Engineer Intern</strong><br>
+                <span>Apr 2022 - Sep 2022</span><br>
+                <span>Advised by Shubham Bakshi, Arthur Drozdov</span><br>
             </div>
-          </div>
+            </div>
+        </div>
 
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
-            <img src="asset/tse_mot.png" style="width: 150px; height: auto; border-radius: 8px;">
+    </section>
+
+    <section aria-labelledby="intern-title">
+      <h2 id="intern-title">Education</h2>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="asset/Oxford_logo.png" style="width: 120px; height: auto; border-radius: 8px;">
             
             <div>
-              <strong>Target Speaker Extraction through Comparing Noisy Positive and Negative Audio Enrollments.</strong><br>
-              <strong>Shitong Xu</strong>, Yiyuan Yang, Niki Trigoni, Andrew Markham.<br>
-              Neural Information Processing Systems (NeurIPS), 2025<br><br>
+            <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
+                <strong>University of Oxford</strong><br>
+                <span>Oct 2023 - Present</span><br>
+                <span>PhD in Computer Science</span>
             </div>
-          </div>
+            </div>
+        </div>
 
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
-            <img src="asset/distributed_mic_mot.png" style="width: 150px; height: auto; border-radius: 8px;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="asset/ic_logo.jpg" style="width: 120px; height: auto; border-radius: 8px;">
             
             <div>
-            <strong>Efficient and Microphone-Fault-Tolerant 3D Sound Source Localization.</strong><br>
-            Yiyuan Yang, <strong>Shitong Xu</strong>, Niki Trigoni, Andrew Markham. <br>
-            Interspeech 2025<br><br>
+            <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
+                <strong>Imperial College London</strong><br>
+                <span>Oct 2019 - Aug 2023</span><br>
+                <span>MEng (Integrated Bachelor's and Master's) in Computing</span><br>
+                <span>Graduated with First Class Honours</span>
             </div>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
-            <img src="asset/spear_mot.png" style="width: 150px; height: auto; border-radius: 8px;">
-            
-            <div>
-            <strong>SPEAR: Receiver-to-Receiver Acoustic Neural Warping Field.</strong> <br>
-            Yuhang He*, <strong>Shitong Xu*</strong>, Jiaxing Zhong, Sangyun Shin, Niki Trigoni, Andrew Markham.<br>
-            2024<br><br>
             </div>
-          </div>
+        </div>
 
-          <!-- We propose a receiver-to-receiver neural spatial acoustic effects prediction for an arbitrary target position from a reference position. It requires neither sound source position nor room acoustic properties. -->
 
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.0rem;">
-            <img src="asset/clip-diffuse-lm.png" style="width: 150px; height: auto; border-radius: 8px;">
-            
-            <div>
-            <strong>CLIP-Diffusion-LM: Apply Diffusion Model on Image Captioning.</strong><br>
-            Shitong Xu<br>
-            2022<br><br>
-            </div>
-          </div>
-        </p>
 
-        <h2>Education and Intern Experience</h2>
-        <p>
-          <div style="margin-left: 0.5rem;">
-            <h3>Education</h3>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img src="asset/Oxford_logo.png" style="width: 120px; height: auto; border-radius: 8px;">
-              
-              <div>
-                <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
-                  <strong>University of Oxford</strong><br>
-                  <span>Oct 2023 - Present</span><br>
-                  <span>PhD in Computer Science</span>
-                </div>
-              </div>
-            </div>
 
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img src="asset/ic_logo.jpg" style="width: 120px; height: auto; border-radius: 8px;">
-              
-              <div>
-                <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
-                  <strong>Imperial College London</strong><br>
-                  <span>Oct 2019 - Aug 2023</span><br>
-                  <span>MEng (Integrated Bachelor's and Master's) in Computing</span><br>
-                  <span>Graduated with First Class Honours</span>
-                </div>
-              </div>
-            </div>
 
-            <h3>Internship</h3>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img src="asset/ms_logo.jpg" style="width: 120px; height: auto; border-radius: 8px;">
-              
-              <div>
-                <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
-                  <strong>Research Intern</strong><br>
-                  <span>Microsoft Research Asia, Mar 2026 - July 2026</span><br>
-                  <span>Advised by Chang Xu, Zilong Wang</span><br>
-                </div>
-              </div>
-            </div>
+    </section>
 
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img src="asset/cisco_logo.png" style="width: 120px; height: auto; border-radius: 8px;">
-              
-              <div>
-                <div style="margin-left: 0.5rem; margin-bottom: 1.5rem;">
-                  <strong>Software Engineer Intern</strong><br>
-                  <span>Cisco system, Apr 2022 - Sep 2022</span><br>
-                  <span>Advised by Shubham Bakshi, Arthur Drozdov</span><br>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </p>
-
-        <h2>Teaching Assistant</h2>
-        <p style="margin-left: 1.0rem">
-          Machine Learning (Oct - Dec 2023, Oxford)<br>
-          Deep Learning for Healthcare (Feb - Apr 2024, Oxford)<br>
-          Physics Informed Machine Learning (Feb - Apr 2025, Oxford)
-        </p>
-
-      </section>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+    <h2>Teaching Experience</h2>
+    <p style="margin-left: 1.0rem">
+    <strong>Teaching Assistant, University of Oxford</strong><br>
+    Machine Learning (Oct - Dec 2023)<br>
+    Deep Learning for Healthcare (Feb - Apr 2024)<br>
+    Physics-Informed Machine Learning (Feb - Apr 2025)
+    </p>
+  </main>
+</body>
 </html>
