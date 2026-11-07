@@ -28,9 +28,9 @@
     .role { color: #5c5c5c; margin: 0 0 18px; font-size: 15px; }
     .intro p { margin: 0 0 12px; }
     .photo { display: block; width: 100%; height: auto; border-radius: 8px; }
-    .links { margin: 18px 0 0; }
+    /* .links { margin: 18px 0 0; }
     .links a { display: inline-block; margin: 0 5px; }
-    .links a:first-child { margin-left: 0; }
+    .links a:first-child { margin-left: 0; } */
     .sep { color: #b6b6b6; }
     section { margin-top: 36px; }
     h2 { margin: 0 0 14px; font-size: 23px; font-weight: 400; }
@@ -65,6 +65,25 @@
       .publication { grid-template-columns: 1fr; gap: 9px; }
       .publication img { width: 150px; max-height: 120px; }
       .sep { display: inline; }
+    }
+    .intro-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    margin-top: 12px;
+    font-size: 14px;
+    }
+
+    .links a {
+    display: inline-block;
+    margin: 0;
     }
   </style>
 </head>
@@ -110,7 +129,7 @@
         </ul>
 
 
-        <nav class="links" aria-label="Profile links">
+        <!-- <nav class="links" aria-label="Profile links">
           <a href="mailto:shitong.xu@cs.ox.ac.uk">Email</a>
           <span class="sep">/</span>
           <a href="https://scholar.google.com/citations?user=PSecikcAAAAJ">Google Scholar</a>
@@ -118,9 +137,24 @@
           <a href="https://github.com/xu-shitong">GitHub</a>
           <span class="sep">/</span>
           <a href="/asset/CV2026.pdf">CV</a>
-        </nav>
+        </nav> -->
       </div>
-      <div class="intro-photo"><img class="photo" src="/asset/avatar.jpeg" alt="Portrait of Shitong Xu"></div>
+        <div class="intro-photo">
+            <img src="asset/profile.jpg"
+                alt="Shitong Xu"
+                class="photo">
+
+            <div class="links">
+            <a href="mailto:shitong.xu@cs.ox.ac.uk">Email</a>
+            <!-- <span class="sep">/</span> -->
+            <a href="https://scholar.google.com/citations?user=PSecikcAAAAJ">Google Scholar</a>
+            <!-- <span class="sep">/</span> -->
+            <a href="https://github.com/xu-shitong">GitHub</a>
+            <!-- <span class="sep">/</span> -->
+            <a href="/asset/CV2026.pdf">CV</a>
+            </div>
+        </div>
+
     </header>
 
     <section aria-labelledby="research-title">
@@ -262,10 +296,6 @@
             </div>
             </div>
         </div>
-
-
-
-
 
     </section>
 
