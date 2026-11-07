@@ -85,6 +85,47 @@
     display: inline-block;
     margin: 0;
     }
+    .publication-image {
+    position: relative;
+    width: 165px;
+    }
+
+    .publication-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+
+    .conference-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 85%;
+    background: #002b62;
+    color: white;
+
+    padding: 3px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    }
+    @media (max-width: 700px) {
+    .publication-image {
+        width: 120px;
+    }
+
+    .conference-label {
+        font-size: 11px;
+        padding: 2px 7px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .publication-image {
+        width: 150px;
+    }
+    }
   </style>
 </head>
 <body>
@@ -140,7 +181,7 @@
         </nav> -->
       </div>
         <div class="intro-photo">
-            <img src="asset/profile.jpg"
+            <img src="asset/avatar2.png"
                 alt="Shitong Xu"
                 class="photo">
 
@@ -179,17 +220,22 @@
       <h2 id="publications-title">Research Experience</h2>
 
       <article class="publication">
-        <img src="asset/clinalm.png" loading="lazy" alt="Figure illustrating scaling laws for mixed quantization">
+        <img src="asset/clinalm.png" loading="lazy" alt="ClinALM: Clinically Knowledge Informed Audio-Language Modeling for Pathological Speech">
         <div>
           <h3><a href="https://arxiv.org/abs/2410.06722">ClinALM: Clinically Knowledge Informed Audio-Language Modeling for Pathological Speech</a></h3>
           <p class="authors"><strong>Shitong Xu</strong>, Chang Xu, Zilong Wang.</p>
           <p class="venue">2026, In submission</p>
-          <!-- <p class="paper-links"><a href="https://arxiv.org/abs/2410.06722">Paper</a></p> -->
         </div>
       </article>
 
       <article class="publication">
-        <img src="asset/scene_understand_mic.png" loading="lazy" alt="Geometry-Informed Distributed Acoustic Scene Understanding">
+        <div class="publication-image">
+            <img src="asset/scene_understand_mic.png"
+                loading="lazy"
+                alt="Geometry-Informed Distributed Acoustic Scene Understanding">
+
+            <span class="conference-label">Interspeech</span>
+        </div>
         <div>
             <h3>Geometry-Informed Distributed Acoustic Scene Understanding</h3>
             <p class="authors">Yiyuan Yang, <strong>Shitong Xu</strong>, Niki Trigoni, Andrew Markham.</p>
@@ -199,7 +245,14 @@
       </article>
 
       <article class="publication">
-        <img src="asset/tse_mot.png" loading="lazy" alt="Target Speaker Extraction through Comparing Noisy Positive and Negative Audio Enrollments">
+        <!-- <img src="asset/tse_mot.png" loading="lazy" alt="Target Speaker Extraction through Comparing Noisy Positive and Negative Audio Enrollments"> -->
+        <div class="publication-image">
+            <img src="asset/tse_mot.png"
+                loading="lazy"
+                alt="Target Speaker Extraction through Comparing Noisy Positive and Negative Audio Enrollments">
+
+            <span class="conference-label">NeurIPS</span>
+        </div>
         <div>
             <h3>Target Speaker Extraction through Comparing Noisy Positive and Negative Audio Enrollments</h3>
             <p class="authors"><strong>Shitong Xu</strong>, Yiyuan Yang, Niki Trigoni, Andrew Markham.</p>
@@ -209,7 +262,14 @@
       </article>
 
       <article class="publication">
-        <img src="asset/distributed_mic_mot.png" loading="lazy" alt="Efficient and Microphone-Fault-Tolerant 3D Sound Source Localization">
+        <!-- <img src="asset/distributed_mic_mot.png" loading="lazy" alt="Efficient and Microphone-Fault-Tolerant 3D Sound Source Localization"> -->
+        <div class="publication-image">
+            <img src="asset/distributed_mic_mot.png"
+                loading="lazy"
+                alt="Efficient and Microphone-Fault-Tolerant 3D Sound Source Localization">
+
+            <span class="conference-label">Interspeech</span>
+        </div>
         <div>
             <h3>Efficient and Microphone-Fault-Tolerant 3D Sound Source Localization</h3>
             <p class="authors">Yiyuan Yang, <strong>Shitong Xu</strong>, Niki Trigoni, Andrew Markham.</p>
